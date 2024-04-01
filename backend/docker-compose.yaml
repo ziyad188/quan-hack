@@ -1,0 +1,20 @@
+version: '3'
+services:
+  flask_app1:
+    build: /Users/mohammedziyad/Downloads/quan-hack/flask-services /backend/server1
+    ports:
+      - "5002:5002"
+    restart: always
+    networks:
+      - my_network
+
+  flask_app2:
+    build: /Users/mohammedziyad/Downloads/quan-hack/flask-services /backend/server2
+    ports:
+      - "5001:5001"
+    restart: always
+    networks:
+      - my_network
+
+networks:
+  my_network:
